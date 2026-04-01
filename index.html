@@ -101,13 +101,6 @@
         </div>
     </section>
 
-    <!-- BANNER CUIDADO CAPILAR -->
-    <section class="relative overflow-hidden">
-        <img src="images/banner-capilar.png"
-             alt="Cuidado Capilar Consciente"
-             class="w-full h-64 md:h-80 object-cover">
-    </section>
-
     <!-- PRODUCTOS -->
     <section id="productos" class="py-24">
         <div class="max-w-7xl mx-auto px-6">
@@ -344,6 +337,123 @@
             </div>
         </div>
     </section>
+
+    <!-- CARRUSEL CTAs -->
+    <section class="py-24 bg-eco-sand/30 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="relative">
+                <!-- Slides container -->
+                <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+
+                    <!-- Slide 1: Cuidado Capilar -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="grid md:grid-cols-2 gap-0 bg-white rounded-3xl overflow-hidden min-h-[400px]">
+                            <div class="p-10 md:p-16 flex flex-col justify-center space-y-5 order-2 md:order-1">
+                                <span class="text-eco-green text-xs font-medium tracking-wider uppercase">Línea Capilar</span>
+                                <h3 class="font-serif text-3xl md:text-4xl leading-tight">Cuidado Capilar Consciente</h3>
+                                <p class="text-eco-dark/60 leading-relaxed">
+                                    Ingredientes 100% naturales para un cabello sano, sin plástico.
+                                    Romero, ortiga, arcilla verde y limón en una fórmula sólida biodegradable.
+                                </p>
+                                <a href="#productos" class="inline-block self-start bg-eco-green text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-eco-green/90 transition-colors">
+                                    Descubrí la colección
+                                </a>
+                            </div>
+                            <div class="bg-eco-cream flex items-center justify-center p-8 order-1 md:order-2">
+                                <img src="images/shampoo-solido.png" alt="Shampoo Sólido ECO" class="max-h-80 object-contain" style="mix-blend-mode: multiply;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Pasta Dental -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="grid md:grid-cols-2 gap-0 bg-white rounded-3xl overflow-hidden min-h-[400px]">
+                            <div class="p-10 md:p-16 flex flex-col justify-center space-y-5 order-2 md:order-1">
+                                <span class="text-eco-green text-xs font-medium tracking-wider uppercase">Higiene Oral</span>
+                                <h3 class="font-serif text-3xl md:text-4xl leading-tight">Tu Sonrisa, Más Consciente y Fresca</h3>
+                                <p class="text-eco-dark/60 leading-relaxed">
+                                    La pasta dental sólida realmente ECO.
+                                    Ingredientes naturales y cero residuos. Envase reutilizable.
+                                </p>
+                                <a href="#productos" class="inline-block self-start bg-eco-green text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-eco-green/90 transition-colors">
+                                    Comprar ahora
+                                </a>
+                            </div>
+                            <div class="bg-eco-cream flex items-center justify-center p-8 order-1 md:order-2">
+                                <img src="images/pasta-dental.png" alt="Pasta Dental ECO" class="max-h-80 object-contain" style="mix-blend-mode: multiply;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Agua Micelar -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="grid md:grid-cols-2 gap-0 bg-white rounded-3xl overflow-hidden min-h-[400px]">
+                            <div class="p-10 md:p-16 flex flex-col justify-center space-y-5 order-2 md:order-1">
+                                <span class="text-eco-green text-xs font-medium tracking-wider uppercase">Limpieza Facial</span>
+                                <h3 class="font-serif text-3xl md:text-4xl leading-tight">Limpieza Suave con Agua de Rosas</h3>
+                                <p class="text-eco-dark/60 leading-relaxed">
+                                    Remueve impurezas y maquillaje respetando el pH natural de tu piel.
+                                    125cc de pura frescura botánica.
+                                </p>
+                                <a href="#productos" class="inline-block self-start bg-eco-green text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-eco-green/90 transition-colors">
+                                    Conocé más
+                                </a>
+                            </div>
+                            <div class="bg-eco-cream flex items-center justify-center p-8 order-1 md:order-2">
+                                <img src="images/agua-micelar-lifestyle.png" alt="Agua Micelar ECO" class="max-h-80 object-contain" style="mix-blend-mode: multiply;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controles -->
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <button onclick="moveCarousel(-1)" class="w-10 h-10 rounded-full border border-eco-dark/20 flex items-center justify-center hover:bg-eco-green hover:text-white hover:border-eco-green transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                        </svg>
+                    </button>
+                    <div class="flex gap-2" id="carousel-dots">
+                        <button onclick="goToSlide(0)" class="w-2.5 h-2.5 rounded-full bg-eco-green transition-colors"></button>
+                        <button onclick="goToSlide(1)" class="w-2.5 h-2.5 rounded-full bg-eco-dark/20 transition-colors"></button>
+                        <button onclick="goToSlide(2)" class="w-2.5 h-2.5 rounded-full bg-eco-dark/20 transition-colors"></button>
+                    </div>
+                    <button onclick="moveCarousel(1)" class="w-10 h-10 rounded-full border border-eco-dark/20 flex items-center justify-center hover:bg-eco-green hover:text-white hover:border-eco-green transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function moveCarousel(dir) {
+            currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            document.getElementById('carousel').style.transform = `translateX(-${currentSlide * 100}%)`;
+            const dots = document.getElementById('carousel-dots').children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = `w-2.5 h-2.5 rounded-full transition-colors ${i === currentSlide ? 'bg-eco-green' : 'bg-eco-dark/20'}`;
+            }
+        }
+
+        // Auto-advance cada 6 segundos
+        setInterval(() => moveCarousel(1), 6000);
+    </script>
 
     <!-- CONTACTO / FOOTER -->
     <footer id="contacto" class="bg-eco-dark text-white py-16">
